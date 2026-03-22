@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "洛谷题目抓取器",
+  "version": "1.0",
+  "description": "抓取洛谷题目并保存为 Markdown 文件。",
+  "permissions": ["activeTab", "downloads", "tabs"],
+  "host_permissions": [
+    "https://ti.luogu.com.cn/*",
+    "https://www.luogu.com.cn/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ti.luogu.com.cn/*",
+        "https://www.luogu.com.cn/*"
+      ],
+      "run_at": "document_idle",
+      "js": ["content.js"]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+body {
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+  margin: 0;
+  padding: 16px;
+  width: 280px;
+  background: #f7f7f5;
+  color: #202124;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+button {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  background: #1f6feb;
+  color: #fff;
+}
+
+button:hover {
+  background: #1558bb;
+}
+
+#status {
+  margin: 0 0 12px;
+  min-height: 20px;
+  font-size: 13px;
+  color: #444;
+}
+
+#status[data-state="error"] {
+  color: #c62828;
+}
